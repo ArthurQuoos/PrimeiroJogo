@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://4rwyq850xvyp"]
+
+[ext_resource type="Script" uid="uid://cbm25akgpskp6" path="res://levels/main.gd" id="1_2262g"]
+[ext_resource type="PackedScene" uid="uid://bb8sv471x15yw" path="res://objects/platforms/platform.tscn" id="2_wdj6m"]
+[ext_resource type="PackedScene" uid="uid://bwwq0s4clucfy" path="res://objects/block/block.tscn" id="3_l8qe7"]
+[ext_resource type="PackedScene" uid="uid://bcyxdylrndnyt" path="res://actors/player.tscn" id="4_m1504"]
+
+[node name="Main" type="Node2D" unique_id=1768028946]
+script = ExtResource("1_2262g")
+
+[node name="Ground" parent="." unique_id=630633444 instance=ExtResource("2_wdj6m")]
+position = Vector2(576, 628)
+size = Vector2(1152, 40)
+
+[node name="FloatingPlatform" parent="." unique_id=1824264875 instance=ExtResource("2_wdj6m")]
+position = Vector2(800, 532)
+
+[node name="Block" parent="." unique_id=2109304849 instance=ExtResource("3_l8qe7")]
+position = Vector2(350, 470)
+
+[node name="Player" parent="." unique_id=1693845220 instance=ExtResource("4_m1504")]
+position = Vector2(150, 560)
+
+[node name="CoinLabel" type="Label" parent="." unique_id=1656995768]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 95.0
+offset_bottom = 39.0
+text = "Moedas: 0"
